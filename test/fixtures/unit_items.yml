@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  unit: 
+  squad: 
+  count: 1
+
+two:
+  unit: 
+  squad: 
+  count: 1

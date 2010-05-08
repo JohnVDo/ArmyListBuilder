@@ -1,0 +1,18 @@
+<p>
+  <b>Troop Choice:</b>
+  <%=h @unit.troop_choice.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @unit.name %>
+</p>
+
+<p>
+  <b>Point:</b>
+  <%=h @unit.point %>
+</p>
+
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>

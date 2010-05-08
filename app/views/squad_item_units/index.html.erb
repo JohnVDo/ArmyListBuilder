@@ -1,0 +1,28 @@
+<h1>Listing squad_item_units</h1>
+
+<table>
+  <tr>
+    <th>Squad item</th>
+    <th>Unit</th>
+    <th>Default</th>
+    <th>Min</th>
+    <th>Max</th>
+  </tr>
+
+<% @squad_item_units.each do |squad_item_unit| %>
+  <tr>
+    <td><%=h squad_item_unit.squad_item.name %></td>
+    <td><%=h squad_item_unit.unit.name %></td>
+    <td><%=h squad_item_unit.default %></td>
+    <td><%=h squad_item_unit.min %></td>
+    <td><%=h squad_item_unit.max %></td>
+    <td><%= link_to 'Show', squad_item_unit %></td>
+    <td><%= link_to 'Edit', edit_squad_item_unit_path(squad_item_unit) %></td>
+    <td><%= link_to 'Destroy', squad_item_unit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New squad_item_unit', new_squad_item_unit_path %>

@@ -1,0 +1,22 @@
+<h1>Listing squad_items</h1>
+
+<table>
+  <tr>
+    <th>Troop choice</th>
+    <th>Name</th>
+  </tr>
+
+<% @squad_items.each do |squad_item| %>
+  <tr>
+    <td><%=h squad_item.troop_choice.name %></td>
+    <td><%=h squad_item.name %></td>
+    <td><%= link_to 'Show', squad_item %></td>
+    <td><%= link_to 'Edit', edit_squad_item_path(squad_item) %></td>
+    <td><%= link_to 'Destroy', squad_item, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New squad_item', new_squad_item_path %>

@@ -1,0 +1,5 @@
+Unit:	The basic "class". This represent any potential miniature
+UnitItem: The instantiated Unit; eg actual model
+SquadItem: Correspond to Codex squad selection
+SquadItemUnit: Possible unit choices for the SquadItem
+Squad: Actual squad selected.

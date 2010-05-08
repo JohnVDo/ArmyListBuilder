@@ -1,0 +1,2 @@
+module TroopChoicesHelper
+end

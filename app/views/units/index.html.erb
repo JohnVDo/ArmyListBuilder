@@ -1,0 +1,24 @@
+<h1>Listing units</h1>
+
+<table>
+  <tr>
+    <th>Troop Choice</th>
+    <th>Name</th>
+    <th>Point</th>
+  </tr>
+
+<% @units.each do |unit| %>
+  <tr>
+    <td><%=h unit.troop_choice.name unless unit.troop_choice.nil? %></td>
+    <td><%=h unit.name %></td>
+    <td><%=h unit.point %></td>
+    <td><%= link_to 'Show', unit %></td>
+    <td><%= link_to 'Edit', edit_unit_path(unit) %></td>
+    <td><%= link_to 'Destroy', unit, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New unit', new_unit_path %>

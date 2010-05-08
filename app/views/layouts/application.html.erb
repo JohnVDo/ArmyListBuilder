@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+       "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <title>Welcome</title>
+  <%= stylesheet_link_tag 'scaffold' %>
+</head>
+<body>
+
+  <div id="column">
+    <div id="side">
+      <a href=""">Home</a><br />
+      <a href=""">Home</a><br />
+      <a href=""">Home</a><br />
+      <br />
+      Army List <br />
+      <ul>
+        <li><%= link_to 'squads', squads_path %></li>
+      </ul>
+      <br />
+
+      Admin<br />
+      <ul>
+        <li><%= link_to 'troop choices', troop_choices_path %></li>
+        <li><%= link_to 'squad_items', squad_items_path %></li>
+        <li><%= link_to 'squad_item_units', squad_item_units_path %></li>
+        <li><%= link_to 'units', units_path %></li>
+      </ul>
+    </div>
+    <div id="main">
+      <p style="color: green"><%= flash[:notice] %></p>
+
+      <%= yield %>
+    </div>
+  </div>
+
+</body>
+</html>

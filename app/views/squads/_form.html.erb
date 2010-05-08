@@ -1,0 +1,16 @@
+<% form_for(@squad) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label @squad.squad_item.name %>
+    <%= f.hidden_field :squad_item_id %>
+  </p>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

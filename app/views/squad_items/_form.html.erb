@@ -1,0 +1,15 @@
+<% form_for(@squad_item) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :troop_choice_id %>
+    <%= collection_select :squad_item, :troop_choice_id, TroopChoice.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

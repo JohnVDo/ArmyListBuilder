@@ -1,0 +1,15 @@
+<p>
+  <b>Troop choice:</b>
+  <%=h @squad_item.troop_choice.name %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @squad_item.name %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_squad_item_path(@squad_item) %> |
+<%= link_to 'Back', squad_items_path %>

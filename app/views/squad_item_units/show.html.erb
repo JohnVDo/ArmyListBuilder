@@ -1,0 +1,28 @@
+<p>
+  <b>Squad item:</b>
+  <%=h @squad_item_unit.squad_item.name %>
+</p>
+
+<p>
+  <b>Unit:</b>
+  <%=h @squad_item_unit.unit.name %>
+</p>
+
+<p>
+  <b>Default:</b>
+  <%=h @squad_item_unit.default %>
+</p>
+
+<p>
+  <b>Min:</b>
+  <%=h @squad_item_unit.min %>
+</p>
+
+<p>
+  <b>Max:</b>
+  <%=h @squad_item_unit.max %>
+</p>
+
+
+<%= link_to 'Edit', edit_squad_item_unit_path(@squad_item_unit) %> |
+<%= link_to 'Back', squad_item_units_path %>

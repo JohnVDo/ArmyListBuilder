@@ -1,0 +1,21 @@
+<% form_for(@unit) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :troop_choice_id %>
+    <%= collection_select :unit, :troop_choice_id, TroopChoice.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :point %><br />
+    <%= f.text_field :point %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+

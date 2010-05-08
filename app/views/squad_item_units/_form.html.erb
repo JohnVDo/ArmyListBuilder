@@ -1,0 +1,27 @@
+<% form_for(@squad_item_unit) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :squad_item_id %><br />
+    <%= collection_select :squad_item_unit, :squad_item_id , SquadItem.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :unit_id %><br />
+    <%= collection_select :squad_item_unit, :unit_id, Unit.all, :id, :name %>
+  </p>
+  <p>
+    <%= f.label :default %><br />
+    <%= f.text_field :default %>
+  </p>
+  <p>
+    <%= f.label :min %><br />
+    <%= f.text_field :min %>
+  </p>
+  <p>
+    <%= f.label :max %><br />
+    <%= f.text_field :max %>
+  </p>
+  <p>
+    <%= f.submit 'Save' %>
+  </p>
+<% end %>

@@ -1,0 +1,34 @@
+
+<h1>Army List</h1>
+
+<h3>Total points: <%= squads_total_point %></h3>
+
+<table>
+  <tr>
+    <th>Troop Choice</th>
+    <th>Name</th>
+    <th>Squad</th>
+    <th>Total Points</th>
+  </tr>
+
+<% @squads_hq.each do |squad| %>
+  <%= render :partial => "squad", :locals => {:squad => squad} %>
+<% end %>
+<% @squads_elite.each do |squad| %>
+  <%= render :partial => "squad", :locals => {:squad => squad} %>
+<% end %>
+<% @squads_troop.each do |squad| %>
+  <%= render :partial => "squad", :locals => {:squad => squad} %>
+<% end %>
+<% @squads_fast.each do |squad| %>
+  <%= render :partial => "squad", :locals => {:squad => squad} %>
+<% end %>
+<% @squads_heavy.each do |squad| %>
+  <%= render :partial => "squad", :locals => {:squad => squad} %>
+<% end %>
+
+</table>
+
+<br />
+
+<%= link_to 'Add squad', {:action => :add_squad}, :method => :post %> 
