@@ -48926,3 +48926,1601 @@ Rendered builder/_squad (0.0ms)
 Rendered builder/_squad (0.0ms)
 Rendered builder/_squad (0.0ms)
 Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/builder/edit/1]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:04) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (10.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 50, DB: 10) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:06) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:06', "count" = 29 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:07) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:07) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:07', "count" = 28 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 140ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:08) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:08) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (10.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:08', "count" = 27 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 10) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:08) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:09) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:09', "count" = 26 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 80ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:09) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 50ms (View: 10, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:10) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:10', "count" = 25 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:11) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (10.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 10, DB: 10) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:11) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:11', "count" = 24 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:11) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:12) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:12', "count" = 23 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 70ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:12) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:14) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:14', "count" = 22 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:14) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:15) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:15', "count" = 21 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:15) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:16) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:16', "count" = 20 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:17) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:17) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:17', "count" = 19 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 70ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:17) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:18) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:18', "count" = 18 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:19) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:19) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:19', "count" = 17 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:19) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:20) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:20', "count" = 16 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:21) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (10.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 10, DB: 10) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:22) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:22', "count" = 15 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:22) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:23) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:23', "count" = 14 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:23) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:24) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:24', "count" = 13 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 80ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:24) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:25) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:25', "count" = 12 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:25) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:26) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:26', "count" = 11 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:27) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:28) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"50", "unit_item"=>"72"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 72) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:28', "count" = 10 WHERE "id" = 72[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=50
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=50&unit_item=72]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:28) [GET]
+  Parameters: {"id"=>"1", "squad"=>"50"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 50) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=50]
+
+
+Processing BuilderController#edit (for 127.0.0.1 at 2010-05-09 14:21:29) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (10.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 3) [0m
+  [4;36;1mTroopChoice Load (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 1) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mTroopChoice Load (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering builder/edit
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (10.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+Rendered builder/_army_list_header (20.0ms)
+Rendered builder/_squad_header (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Completed in 60ms (View: 30, DB: 20) | 200 OK [http://localhost/builder/edit/1]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:31) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 40ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:33) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (10.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:33', "count" = 29 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 90ms (DB: 10) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:33) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:34) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:34', "count" = 28 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:34) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (10.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 10) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:34) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:34', "count" = 27 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:34) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:35) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:35', "count" = 26 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 110ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:35) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:35) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (10.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:36', "count" = 25 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 80ms (DB: 10) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:36) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (10.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 10) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:37) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:37', "count" = 24 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 80ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:37) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:37) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:37', "count" = 23 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:37) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:38) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:38', "count" = 22 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 120ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:38) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:40) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:40', "count" = 21 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:41) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:41) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:41', "count" = 20 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 150ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:42) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:43) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:43', "count" = 19 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 120ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:43) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:44) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:44', "count" = 18 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 80ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:44) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:45) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:45', "count" = 17 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 160ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:46) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:47) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (10.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:47', "count" = 16 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 110ms (DB: 10) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:47) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:48) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:48', "count" = 15 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:48) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:49) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:49', "count" = 14 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 120ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:49) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 70ms (View: 60, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:50) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:50', "count" = 13 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:51) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:52) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:52', "count" = 12 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:52) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:53) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:53', "count" = 11 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 100ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:53) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (10.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 10, DB: 10) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:54) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:54', "count" = 10 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:55) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 50ms (View: 40, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#substract (for 127.0.0.1 at 2010-05-09 14:21:56) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mSquadItemUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;35;1mUnitItem Update (0.0ms)[0m   [0mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:56', "count" = 9 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 120ms (DB: 0) | 302 Found [http://localhost/builder/substract/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:56) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 30ms (View: 20, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#add (for 127.0.0.1 at 2010-05-09 14:21:58) [POST]
+  Parameters: {"authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1", "squad"=>"52", "unit_item"=>"75"}
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items"."id" = 75) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units"."unit_id" = 27) AND ("squad_item_units".squad_item_id = 21) LIMIT 1[0m
+  [4;36;1mUnitItem Update (0.0ms)[0m   [0;1mUPDATE "unit_items" SET "updated_at" = '2010-05-09 21:21:58', "count" = 10 WHERE "id" = 75[0m
+Redirected to http://localhost:3000/builder/modify/1?squad=52
+Completed in 90ms (DB: 0) | 302 Found [http://localhost/builder/add/1?squad=52&unit_item=75]
+
+
+Processing BuilderController#modify (for 127.0.0.1 at 2010-05-09 14:21:58) [GET]
+  Parameters: {"id"=>"1", "squad"=>"52"}
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads"."id" = 52) [0m
+Rendering template within layouts/application
+Rendering builder/modify
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+Completed in 60ms (View: 50, DB: 0) | 200 OK [http://localhost/builder/modify/1?squad=52]
+
+
+Processing BuilderController#edit (for 127.0.0.1 at 2010-05-09 14:21:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 3) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+Rendering template within layouts/application
+Rendering builder/edit
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+Rendered builder/_army_list_header (20.0ms)
+Rendered builder/_squad_header (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Completed in 80ms (View: 40, DB: 0) | 200 OK [http://localhost/builder/edit/1]
+
+
+Processing BuilderController#add_squad (for 127.0.0.1 at 2010-05-09 14:22:04) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTroopChoice Load (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" [0m
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering builder/add_squad
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;35;1mUnitItem Load (10.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+Rendered builder/_army_list_header (30.0ms)
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 2) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 4) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 5) [0m
+Completed in 140ms (View: 110, DB: 10) | 200 OK [http://localhost/builder/add_squad/1]
+
+
+Processing BuilderController#add_new_squad (for 127.0.0.1 at 2010-05-09 14:22:07) [POST]
+  Parameters: {"squad_item"=>"13", "authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;36;1mSquad Create (0.0ms)[0m   [0;1mINSERT INTO "squads" ("name", "created_at", "updated_at", "squad_item_id", "army_list_id") VALUES('Furioso Dreadnought', '2010-05-09 21:22:07', '2010-05-09 21:22:07', 13, 1)[0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units".squad_item_id = 13) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;35;1mUnitItem Create (10.0ms)[0m   [0mINSERT INTO "unit_items" ("squad_id", "created_at", "unit_id", "updated_at", "count") VALUES(57, '2010-05-09 21:22:07', 15, '2010-05-09 21:22:07', 1)[0m
+Redirected to http://localhost:3000/builder/edit/1
+Completed in 190ms (DB: 10) | 302 Found [http://localhost/builder/add_new_squad/1?squad_item=13]
+
+
+Processing BuilderController#edit (for 127.0.0.1 at 2010-05-09 14:22:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 3) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering builder/edit
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+Rendered builder/_army_list_header (20.0ms)
+Rendered builder/_squad_header (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Completed in 70ms (View: 40, DB: 0) | 200 OK [http://localhost/builder/edit/1]
+
+
+Processing BuilderController#add_squad (for 127.0.0.1 at 2010-05-09 14:22:08) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTroopChoice Load (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" [0m
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering builder/add_squad
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+Rendered builder/_army_list_header (60.0ms)
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 2) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 4) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 5) [0m
+Completed in 120ms (View: 110, DB: 0) | 200 OK [http://localhost/builder/add_squad/1]
+
+
+Processing BuilderController#add_new_squad (for 127.0.0.1 at 2010-05-09 14:22:10) [POST]
+  Parameters: {"squad_item"=>"13", "authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;36;1mSquad Create (0.0ms)[0m   [0;1mINSERT INTO "squads" ("name", "created_at", "updated_at", "squad_item_id", "army_list_id") VALUES('Furioso Dreadnought', '2010-05-09 21:22:10', '2010-05-09 21:22:10', 13, 1)[0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units".squad_item_id = 13) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;35;1mUnitItem Create (0.0ms)[0m   [0mINSERT INTO "unit_items" ("squad_id", "created_at", "unit_id", "updated_at", "count") VALUES(58, '2010-05-09 21:22:10', 15, '2010-05-09 21:22:10', 1)[0m
+Redirected to http://localhost:3000/builder/edit/1
+Completed in 220ms (DB: 0) | 302 Found [http://localhost/builder/add_new_squad/1?squad_item=13]
+
+
+Processing BuilderController#edit (for 127.0.0.1 at 2010-05-09 14:22:10) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 3) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering builder/edit
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+Rendered builder/_army_list_header (50.0ms)
+Rendered builder/_squad_header (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Completed in 110ms (View: 80, DB: 0) | 200 OK [http://localhost/builder/edit/1]
+
+
+Processing BuilderController#add_squad (for 127.0.0.1 at 2010-05-09 14:22:13) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTroopChoice Load (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" [0m
+  [4;35;1mArmyList Load (10.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering builder/add_squad
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (10.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+Rendered builder/_army_list_header (20.0ms)
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 2) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 4) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 5) [0m
+Completed in 90ms (View: 70, DB: 20) | 200 OK [http://localhost/builder/add_squad/1]
+
+
+Processing BuilderController#add_new_squad (for 127.0.0.1 at 2010-05-09 14:22:16) [POST]
+  Parameters: {"squad_item"=>"32", "authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 32) [0m
+  [4;36;1mSquad Create (0.0ms)[0m   [0;1mINSERT INTO "squads" ("name", "created_at", "updated_at", "squad_item_id", "army_list_id") VALUES('Stormraven', '2010-05-09 21:22:16', '2010-05-09 21:22:16', 32, 1)[0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units".squad_item_id = 32) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 44) [0m
+  [4;35;1mUnitItem Create (0.0ms)[0m   [0mINSERT INTO "unit_items" ("squad_id", "created_at", "unit_id", "updated_at", "count") VALUES(59, '2010-05-09 21:22:16', 44, '2010-05-09 21:22:16', 1)[0m
+Redirected to http://localhost:3000/builder/edit/1
+Completed in 230ms (DB: 0) | 302 Found [http://localhost/builder/add_new_squad/1?squad_item=32]
+
+
+Processing BuilderController#edit (for 127.0.0.1 at 2010-05-09 14:22:16) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 3) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 32) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering builder/edit
+  [4;36;1mUnitItem Load (10.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 59) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 44) [0m
+Rendered builder/_army_list_header (20.0ms)
+Rendered builder/_squad_header (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Completed in 80ms (View: 40, DB: 10) | 200 OK [http://localhost/builder/edit/1]
+
+
+Processing BuilderController#add_squad (for 127.0.0.1 at 2010-05-09 14:22:18) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mTroopChoice Load (0.0ms)[0m   [0;1mSELECT * FROM "troop_choices" [0m
+  [4;35;1mArmyList Load (0.0ms)[0m   [0mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering builder/add_squad
+  [4;36;1mSquad Load (0.0ms)[0m   [0;1mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;36;1mUnit Load (10.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 58) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 59) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 44) [0m
+Rendered builder/_army_list_header (30.0ms)
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 2) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 4) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items".troop_choice_id = 5) [0m
+Completed in 120ms (View: 100, DB: 10) | 200 OK [http://localhost/builder/add_squad/1]
+
+
+Processing BuilderController#add_new_squad (for 127.0.0.1 at 2010-05-09 14:22:21) [POST]
+  Parameters: {"squad_item"=>"32", "authenticity_token"=>"ua7xuv+x2etFN3jMgj/BshYxMMGF/GzPX/BHP/D/5k0=", "id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquadItem Load (0.0ms)[0m   [0mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 32) [0m
+  [4;36;1mSquad Create (0.0ms)[0m   [0;1mINSERT INTO "squads" ("name", "created_at", "updated_at", "squad_item_id", "army_list_id") VALUES('Stormraven', '2010-05-09 21:22:21', '2010-05-09 21:22:21', 32, 1)[0m
+  [4;35;1mSquadItemUnit Load (0.0ms)[0m   [0mSELECT * FROM "squad_item_units" WHERE ("squad_item_units".squad_item_id = 32) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 44) [0m
+  [4;35;1mUnitItem Create (0.0ms)[0m   [0mINSERT INTO "unit_items" ("squad_id", "created_at", "unit_id", "updated_at", "count") VALUES(60, '2010-05-09 21:22:21', 44, '2010-05-09 21:22:21', 1)[0m
+Redirected to http://localhost:3000/builder/edit/1
+Completed in 210ms (DB: 0) | 302 Found [http://localhost/builder/add_new_squad/1?squad_item=32]
+
+
+Processing BuilderController#edit (for 127.0.0.1 at 2010-05-09 14:22:21) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mArmyList Load (0.0ms)[0m   [0;1mSELECT * FROM "army_lists" WHERE ("army_lists"."id" = 1) [0m
+  [4;35;1mSquad Load (0.0ms)[0m   [0mSELECT * FROM "squads" WHERE ("squads".army_list_id = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 3) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 1) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 3) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 2) [0m
+  [4;36;1mSquadItem Load (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 32) [0m
+  [4;35;1mTroopChoice Load (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "squad_items" WHERE ("squad_items"."id" = 32) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "troop_choices" WHERE ("troop_choices"."id" = 5) [0m
+Rendering template within layouts/application
+Rendering builder/edit
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 49) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 3) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 50) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 52) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 28) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 53) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mUnit Load (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 54) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;35;1mUnitItem Load (0.0ms)[0m   [0mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 56) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "units" WHERE ("units"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 26) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 57) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 15) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 59) [0m
+  [4;35;1mUnit Load (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 44) [0m
+  [4;36;1mUnitItem Load (0.0ms)[0m   [0;1mSELECT * FROM "unit_items" WHERE ("unit_items".squad_id = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "units" WHERE ("units"."id" = 44) [0m
+Rendered builder/_army_list_header (20.0ms)
+Rendered builder/_squad_header (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (0.0ms)
+Rendered builder/_squad (10.0ms)
+Completed in 80ms (View: 60, DB: 0) | 200 OK [http://localhost/builder/edit/1]
