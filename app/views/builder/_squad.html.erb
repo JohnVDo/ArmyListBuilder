@@ -4,10 +4,10 @@
     <td><%=h squad.squad_item.name %></td>
     <td><%=h squad.point %></td>
     <td>
-      <%= link_to 'Modify', {:action => :modify, :id => squad} %><br />
+      <%= link_to 'Modify', {:action => :modify, :params => { :id => @army_list,
+                                              :squad => squad}} %><br />
     </td>
     <td>
-      <%= link_to 'Show', squad %>
       <%= link_to 'Edit squad name', edit_squad_path(squad) %>
       <%= link_to 'Destroy', squad, :confirm => 'Are you sure?', :method => :delete %>
     </td>

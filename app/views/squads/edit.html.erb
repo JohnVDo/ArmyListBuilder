@@ -2,6 +2,8 @@
 
 <%= render :partial => "form" %>
 
+<%= link_to 'Army List', :controller => :builder, :action => :edit, :id => @squad.army_list %><br />
+
 <%= link_to 'Show', @squad %> |
 <%= link_to 'Back', squads_path %> |
 <%= link_to 'Destroy', @squad, :confirm => 'Are you sure?', :method => :delete %>

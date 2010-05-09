@@ -1,0 +1,12 @@
+<%= render :partial => "army_list_header" %>
+
+<table>
+  <%= render :partial => "squad_header" %>
+
+  <% @squads.each do |squad| %>
+    <%= render :partial => "squad", :locals => {:squad => squad} %>
+  <% end %>
+</table>
+
+<%= link_to 'add squad', :action => :add_squad, :id => @army_list %> |
+<%= link_to 'back to builder', :controller => :builder %>

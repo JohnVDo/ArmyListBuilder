@@ -1,0 +1,28 @@
+<h2><%=h @squad.name %></h2>
+<h3>Total points: <%=h @squad.point %></h3>
+
+
+<table>
+  <tr>
+    <th>Count</th>
+    <th>Name</th>
+    <th>Point</th>
+  </tr>
+<% @squad.unit_items.each do |unit_item| %>
+  <tr>
+    <td><%=h unit_item.count %></td>
+    <td><%=h unit_item.unit.name -%></td>
+    <td><%=h unit_item.unit.point -%></td>
+    <td>
+        <%= link_to "+", {:action => :add,
+              :params => {:id => @army_list, :squad => @squad,
+                          :unit_item => unit_item}}, :method => :post -%><br />
+        <%= link_to "-", {:action => :substract,
+              :params => {:id => @army_list, :squad => @squad,
+                          :unit_item => unit_item}}, :method => :post -%>
+    </td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', :action => :edit, :id => @army_list %>

@@ -1,0 +1,20 @@
+<h1>Editing army_list</h1>
+
+<% form_for(@army_list) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :player %><br />
+    <%= f.text_field :player %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @army_list %> |
+<%= link_to 'Back', army_lists_path %>

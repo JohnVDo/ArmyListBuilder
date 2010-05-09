@@ -9,7 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100507173252) do
+ActiveRecord::Schema.define(:version => 20100508131141) do
+
+  create_table "army_lists", :force => true do |t|
+    t.string   "name"
+    t.string   "player"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "squad_item_units", :force => true do |t|
     t.integer  "squad_item_id"
@@ -33,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20100507173252) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "squad_item_id"
+    t.integer  "army_list_id"
   end
 
   create_table "troop_choices", :force => true do |t|

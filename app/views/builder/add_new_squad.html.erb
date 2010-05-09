@@ -1,0 +1,10 @@
+<%= render :partial => "army_list_header" %>
+
+<table>
+
+<% @army_list.squads.each do |squad| %>
+<tr>
+  <td><%=h squad.name %></td>
+</tr>
+<% end %>
+</table>

@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :army_lists
+
   map.resources :squad_item_units
 
   map.resources :squad_items

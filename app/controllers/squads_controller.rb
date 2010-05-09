@@ -89,7 +89,7 @@ class SquadsController < ApplicationController
     respond_to do |format|
       if @squad.save
         flash[:notice] = 'Squad was successfully created.'
-        format.html { redirect_to squads_path }
+        format.html { redirect_to :back }
         format.xml  { render :xml => @squad, :status => :created, :location => @squad }
       else
         format.html { render :action => "new" }
@@ -106,7 +106,7 @@ class SquadsController < ApplicationController
     respond_to do |format|
       if @squad.update_attributes(params[:squad])
         flash[:notice] = 'Squad was successfully updated.'
-        format.html { redirect_to squads_path }
+        format.html { redirect_to :back }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -124,7 +124,7 @@ class SquadsController < ApplicationController
 
  
     respond_to do |format|
-      format.html { redirect_to(squads_url) }
+      format.html { redirect_to :back }
       format.xml  { head :ok }
     end
   end

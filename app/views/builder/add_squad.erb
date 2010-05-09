@@ -1,0 +1,20 @@
+<%= render :partial => "army_list_header" %>
+
+<% @troop_choices.each do |troop_choice| %>
+<h2><%= troop_choice.name %></h2>
+
+<table border="1">
+  <% troop_choice.squad_items.each do |squad_item| %>
+  <tr>
+    <td><%= link_to "add", {:action => :add_new_squad,
+                           :params => {:id => @army_list,
+                                       :squad_item => squad_item}},
+                           :method => :post %></td>
+    <td><%=h squad_item.name %></td>
+  </tr>
+  <% end %>
+</table>
+
+<% end %>
+
+<%= link_to 'back', :action => :edit, :id => @army_list %>

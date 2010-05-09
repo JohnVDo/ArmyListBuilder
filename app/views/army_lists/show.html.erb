@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%=h @army_list.name %>
+</p>
+
+<p>
+  <b>Player:</b>
+  <%=h @army_list.player %>
+</p>
+
+
+<%= link_to 'Edit', edit_army_list_path(@army_list) %> |
+<%= link_to 'Back', army_lists_path %>

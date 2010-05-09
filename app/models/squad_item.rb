@@ -4,4 +4,5 @@ class SquadItem < ActiveRecord::Base
 
   belongs_to :troop_choice
   has_many :squad_item_units
+  belongs_to :army_list
 end

@@ -1,7 +1,7 @@
 class UnitItem < ActiveRecord::Base
   belongs_to :unit
   belongs_to :squad
-
+  
   validates_numericality_of :count
 
   def min
